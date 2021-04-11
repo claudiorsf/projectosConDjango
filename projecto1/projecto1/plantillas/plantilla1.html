@@ -1,0 +1,38 @@
+<html>
+    <body>
+<!-- para llamar al archivo htmlla sintaxis es la siguiente -->
+{% include "barra.html"%}
+
+    <h1>
+  <h2 style="color: brown;">La primer plantilla de Claudio....... Parte estatica</h2>
+<!-- comparativos -->
+  {% if nombre_persona == "Estudiante Claudio" %}
+  <p>el curso lo esta haciendo</p>
+  {%else%}
+  <p>el curso en realidad lo hace....</p>
+  {% endif %}
+<br>
+ <!-- aca enlazo el documento view def saludos cxt -->
+  <p>El nombre que quiero mostrar es {{nombre_persona}} {{apellido}}................     esto corresponde a una parte dinamica </p> 
+  <!-- si queres poner solo el dia seria {{tiempo.day}}/ {{tiempo.month}}/{{tiempo.year}}-->
+  <p>El tiempo en que estas accediendo a esta web es: {{tiempo}} llamado para saber al hora </p>
+  <!-- esta es una opcion para mostrar listas, sin embargo cuando debo mostrar listas extensas me conviene crear una variable en views y de ahi llamarla para que imprima -->
+<p>{{temas}}</p>
+<p>{{temas.1}}</p>
+<!-- haciendo esto dealcro una variable, donde tengo una lista y de ahi lo cargo en ctx para despues visuzlizarlo en plantill.html -->
+<p> {{temario}}</p>
+<h3 style="color: blue;"><p><strong>Temas del Curso </strong></p></h3>
+<!-- para poner un for y recorrer una lista usando django -->
+<ul>
+  {%if temas %}
+    {%for contenido in temas%}
+
+      <li>{{contenido.upper}}</li>
+
+    {%endfor%}
+  {%else %} 
+    <p> No hay elementos para mostrar</p>
+  {%endif %}
+</ul>
+</body>
+    </html>

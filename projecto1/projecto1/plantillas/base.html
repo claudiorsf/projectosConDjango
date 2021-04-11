@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- esto es para crear plantilla padre hija -->
+
+    <title>
+        <!-- los que este entre estas dos llaves ...block y enblock puede variar -->
+{%block title %} {%enblock%}
+
+    </title>
+</head>
+<body>
+    
+<h2>Plantilla Padre</h2>
+
+<h4> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, sit at neque autem blanditiis molestiae placeat nihil laboriosam velit quam repudiandae necessitatibus corporis omnis, maiores repellat. Vel, ab sunt! Illo.</h4>
+
+
+<!-- entre estas dos llaves habra un contenido cambiante -->
+{%block content %} {%endblock%}
+
+<p>aqui va el texto fijo en este caso footter</p>
+
+
+</body>
+</html>
