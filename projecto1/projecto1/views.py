@@ -71,3 +71,8 @@ def edad(request,edad,agno):
     documento="<html><body><h3>El año %s tendras %s años" %(agno, edadResultado)
     
     return HttpResponse(documento)
+
+def padre(request):
+    fechaActual=datetime.datetime.now()
+
+    return render (request, "hija.html")
